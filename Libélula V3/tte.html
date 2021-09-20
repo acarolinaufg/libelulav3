@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Estilo Incorporado </title>
+    <h1 class="head" style="justify-content: center;">Previsão de Energia</h1>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/m.css">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Ambev_logo.svg"
+     class="img">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Ambev_logo.svg"
+     class="img1">
+</head>
+<body class="gradient">    
+    <p style="justify-content: center;display:flex"> Bem vindo ao preditor de energia da Cervejaria Anápolis! <br><p style="justify-content: center;display:flex">Favor iniciar informando os dados de produção que gostaria de avaliar
+    </p></p><br>
+
+    <form action="{{url_for('adc')}}" method="post">
+        <div class="form-group1">         
+                <div class="teste">
+                    <H3>Processo</H3>
+                    
+                    <label for="Brassagem" class="ipt1">Brassagem</label>
+                    <td>
+                        <th>
+                            <input type="number" class="ipt" id="Brassagem" name="Brassagem" value="" required>   
+                        </th>  
+                    </td>                
+                    <label for="Centrifuga" class="ipt1">Centrifuga</label>
+                    <td>
+                        <th>
+                            <input type="number" class="ipt" id="Centrifuga" name="Centrifuga" value="" required>
+                        </th>
+                    </td>                
+                        <label for="Filtracao" class="ipt1">Filtração</label>
+                        <td>
+                            <th>
+                                <input type="number" class="ipt" id="Filtracao" name="Filtracao" value="" required>
+                            </th>
+                        </td>
+                    </div>
+                       
+            <div class="form-group">
+                <H3  style="margin-left: 8%;">Packaging_Cerveja</H3> 
+                <label for="L_501" class="ipt1">L_501</label>
+                            <td>
+                                <th>
+                                    <input type="number" class="ipt" id="L_501" name="L_501" value="" required>
+                                </th>
+                            </td>            
+                <label for="L_503" class="ipt1">L_503</label>
+                <td>
+
+                    <th>
+                        <input type="number" class="ipt" id="L_503" name="L_503" value="" required>
+                    </th>
+                </td>
+                
+                    <label for="L_511" class="ipt1">L_511_Cerveja</label>
+                    <td>
+                        <th>
+                            <input type="number" class="ipt" id="L_511" name="L_511" value="" required>
+                        </th>
+                    </td>
+                   
+                        
+                   
+
+                        <label for="L_512" class="ipt1">L_512</label>
+                        <td>
+                            <th>
+                                <input type="number" class="ipt" id="L_512" name="L_512" value="" required>
+                            </th>
+                        </td>
+                        
+                                
+                    </div>
+                        
+            <div class="form-group">
+                <H3 style="margin-left: 12%;">Packaging_Refri</H3>
+                <label for="L_511_Refri" class="ipt1">L_511_Refri</label>
+                    <td>
+                        <th>
+                            <input type="number" class="ipt" id="L_511_Refri" name="L_511_Refri" value="" required>
+                        </th>
+                    </td>
+                    <label for="L_521" class="ipt1">L_521</label>
+                        <td>
+                            
+                            <th>
+                                <input type="number" class="ipt" id="L_521" name="L_521" value="" required>
+                            </th>
+                        </td>
+         
+                <label for="L_551" class="ipt1">L_551</label>
+                <td>
+                    <th>
+                        <input type="number" class="ipt" id="L_551" name="L_551" value="" required>
+                    </th>
+                </td>
+                
+                    <label for="L_561" class="ipt1">L_561</label>
+                    <td>
+                        <th>
+                            <input type="number" class="ipt" id="L_561" name="L_561" value="" required>
+                        </th>
+                    </td>
+                    
+                        <label for="L_562 " class="ipt1">L_562</label>
+                        <td>
+                            <th>
+                                <input type="number" class="ipt" id="L_562" name="L_562" value="" required>
+                            </th>
+                           
+                        </td> 
+                   </div>
+                   <!-- está recebendo as notas -->
+                   <div class="form-group" id="result_EN">
+                       <h2 style="margin-left: 12%; color: black; font-size: 22px;">Resultado da Previsão</h2>
+                        <strong><p style="font-size: 22px;"><p style="color: black; margin: 0 0 0 5px;">Valor predito do CO2</p><p style="margin-left: 15px;">{{ text1  }}</p></p></strong>
+                        <hr style="margin: -25px 15px 0 15px;">
+
+                        <strong><p style="font-size: 22px;"><p style="color: black; margin: 0 0 0 5px;">Valor predito da Energia</p><p style="margin-left: 15px;">{{ text2  }}</p></p></strong>
+                        <hr style="margin: -25px 15px 0 15px;">
+
+                        <strong><p style="font-size: 22px;"><p style="color: black; margin: 0 0 0 5px;">Valor predito do Heat</p><p style="margin-left: 15px;">{{ text3 }}</p></p></strong>
+                        <hr style="margin: -25px 15px 0 15px;">
+                    </div>
+            <div class="Botao">
+                <td>
+                    <th>
+                        <button type="submit" class="btn" >enviar</button>
+                    </th>
+                </td>
+
+            </div>
+    </form>
+
+</body>
+
+</html>
+

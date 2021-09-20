@@ -1,0 +1,15 @@
+CREATE table DADOS_lib(
+data  datetime PRIMARY KEY,
+L_501 numeric(10,2),
+L_503 numeric(10,2),
+L_511C numeric(10,2),
+L_511R numeric(10,2),
+L_512 numeric(10,2),
+L_521 numeric(10,2),
+L_551 numeric(10,2),
+L_561 numeric(10,2),
+L_562 numeric(10,2),
+brassagem numeric(10,2),
+centrifuga numeric(10,2),
+filtracao numeric(10,2)	
+)
